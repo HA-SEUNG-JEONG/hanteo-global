@@ -1,18 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import { slides } from "./data/Slide";
 
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((currentIndex + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
+
   const prevSlide = () => {
-    const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    const newIndex =
+      currentIndex === 0
+        ? slides.length - 1
+        : (currentIndex - 1 + slides.length) % slides.length;
     if (newIndex === slides.length - 1) return;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % slides.length;
+    const newIndex =
+      currentIndex === slides.length - 1
+        ? 0
+        : (currentIndex + 1) % slides.length;
     if (newIndex === 0) return;
     setCurrentIndex(newIndex);
   };
