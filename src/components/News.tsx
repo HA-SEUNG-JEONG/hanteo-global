@@ -1,5 +1,7 @@
+import Main from "./Main";
+
 const News = () => {
-  return <main className="mx-auto w-[420px] mt-3 ">News</main>;
+  return <Main title="뉴스" />;
 };
 
 export default News;

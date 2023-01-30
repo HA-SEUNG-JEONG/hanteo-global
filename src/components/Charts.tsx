@@ -1,5 +1,7 @@
+import Main from "./Main";
+
 const Charts = () => {
-  return <main className="mx-auto w-[420px] mt-3 ">차트</main>;
+  return <Main title="차트" />;
 };
 
 export default Charts;

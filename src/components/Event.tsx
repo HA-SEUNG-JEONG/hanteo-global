@@ -1,5 +1,7 @@
+import Main from "./Main";
+
 const Event = () => {
-  return <main className="mx-auto w-[420px] mt-3 ">이벤트</main>;
+  return <Main title="이벤트" />;
 };
 
 export default Event;

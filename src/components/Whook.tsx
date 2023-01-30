@@ -1,5 +1,7 @@
+import Main from "./Main";
+
 const Whook = () => {
-  return <main className="mx-auto w-[420px] mt-3 ">Whook</main>;
+  return <Main title="Whook" />;
 };
 
 export default Whook;

@@ -1,5 +1,7 @@
+import Main from "./Main";
+
 const Store = () => {
-  return <main className="mx-auto w-[420px] mt-3 ">Store</main>;
+  return <Main title="스토어" />;
 };
 
 export default Store;
