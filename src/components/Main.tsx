@@ -5,7 +5,7 @@ interface TitleProps {
 }
 
 const Main = ({ title }: TitleProps) => {
-  return <main className="mx-auto w-[420px] mt-3 ">{title}</main>;
+  return <main className="mx-auto w-[420px] mt-3">{title}</main>;
 };
 
 export default Main;
